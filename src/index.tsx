@@ -11,6 +11,10 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+// If a component is rendered to DOM, you need to target it DIRECTLY to unmount the component.
+const app: HTMLElement | null = document.getElementById('root');
+if ( app !== null ) ReactDOM.unmountComponentAtNode( app );
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

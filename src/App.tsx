@@ -1,14 +1,23 @@
+
 import React from 'react';
-import Navigation from './components/navigation';
+import ReactDOM from 'react-dom';
+import Navigation from './components/Navigation';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>React Day 4</h1>
-      <Navigation />
-    </div>
-  );
+class App extends React.Component {
+  componentWillUnmount ()
+  {
+      console.log( '"componentWillUnmount()" ran.' );
+  }
+  render()
+  {
+    return (
+      <div className="App">
+        <h1>React Day 4</h1>
+        <Navigation />
+      </div>
+    );
+  }
 }
 
 export default App;
